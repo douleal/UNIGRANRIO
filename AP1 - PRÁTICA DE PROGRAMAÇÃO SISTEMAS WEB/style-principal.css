@@ -1,0 +1,86 @@
+*{margin: 0; padding: 0;}
+
+#container {
+    width: auto;
+    height: 100vh;
+    background-image: url(img/home.jpg); background-size: 100%;
+}
+
+#cabeçalho {
+    width: auto;
+    height: 80px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+}
+
+.menu {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 16px;
+    list-style: none;
+    float: center;
+
+}
+
+.menu li{
+    position:relative;
+    float:left;
+    margin: 20px;
+    margin-top: 5%;
+}
+
+.menu li a{color:rgb(0, 0, 0); text-decoration:none; padding:5px 10px;}
+
+.menu li a:hover{
+    background:#333;
+    color:#fff;
+}
+
+#description{
+    position: fixed;
+    width: 50%;
+    height: 657px;
+    text-align: center;
+}
+
+#presentation{
+    position: relative;
+    width: auto;
+    height: 70px;
+    margin-top: 40%;
+    margin-left: 30%;
+}
+
+#button{
+    position: relative;
+    width: auto;
+    height: 50px;
+    margin-top: 1%;
+    margin-left: 30%;
+
+}
+
+.but1{
+    background-color: rgb(48, 159, 179);
+    border: none;
+    border-radius: 30px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.but1 a{
+    border: none;
+    color: white;
+    text-decoration: none;
+}
+
+.but1:hover{
+    background-color: rgb(1, 7, 8);
+    border: none;
+    color: white;
+    text-decoration: none;
+}

@@ -1,0 +1,117 @@
+*{margin: 0; padding: 0;}
+
+#container {
+    width: auto;
+    height: 100vh;
+}
+
+#cabeçalho {
+    width: auto;
+    height: 80px;
+    box-shadow: 0 2px 4px 0 rgba(180, 180, 180, 0.2), 0 2px 5px 0 rgba(180, 180, 180, 0.2);
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+}
+
+.menu {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 16px;
+    list-style: none;
+    float: left;
+
+}
+
+.menu li{
+    position:relative;
+    float:left;
+    margin: 20px;
+    margin-top: 5%;
+}
+
+.menu li a{color:rgb(0, 0, 0); text-decoration:none; padding:5px 10px;}
+
+.menu li a:hover{
+    background:#333;
+    color:#fff;
+}
+
+#section{
+    position: fixed;
+    width: auto;
+    height: 10%;
+    padding-left: 10%;
+    padding-top: 5%;
+}
+
+hr {
+    width: 40px;
+    margin: 1px 0;
+    border: 0;
+    border-top: 2px solid rgb(48, 159, 179);
+}
+
+#sobre{
+    position: fixed;
+    width: auto;
+    height: 100%;
+}
+
+#texto1{
+    position: fixed;
+    z-index: 1;
+    width: 20%;
+    height: 400px;
+    margin-top: 10%;
+    margin-left: 10%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#img{
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    width: 30%;
+    height: 400px;
+    margin-top: 10%;
+    margin-left: 35%;
+    background-image: url(img/about.jpg);
+    background-size: 100%;
+}
+
+#texto2{
+    position: fixed;
+    z-index: 1;
+    width: 20%;
+    height: 400px;
+    margin-top: 10%;
+    margin-left: 70%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.but1{
+    margin-top: 5%;
+    background-color: rgb(48, 159, 179);
+    border: none;
+    border-radius: 30px;
+    color: white;
+    padding: 10px 27px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.but1 a{
+    border: none;
+    color: white;
+    text-decoration: none;
+}
+
+.but1:hover{
+    background-color: rgb(1, 7, 8);
+    border: none;
+    color: white;
+    text-decoration: none;
+}
