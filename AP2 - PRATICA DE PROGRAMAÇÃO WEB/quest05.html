@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QUESTÃO 5</title>
+    <style>
+        body{
+            font: normal 14px Arial;
+        }
+
+        #aluno {
+            font: normal 14px Arial;
+            width: 350px;
+            margin-top: 0%;
+        }
+
+        input {
+            font: normal 14px Arial;
+            width: 100px;
+            margin-top: 0.8%;
+        }
+
+        #but {
+            font: normal 14px Arial;
+            color: white;
+            width: 100px;
+            border: none;
+            background-color: rgb(51, 51, 51);
+            margin-top: 2%; 
+            text-decoration: none;
+            padding: 8px 8px;
+            text-align: center;
+        }
+
+        #res {
+            margin-top: 10px
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Questão 05</h1>
+    <p>Faça um programa que leia o nome e as três notas de uma disciplina de um aluno e, <br> ao final escreva o nome do aluno, sua média e se ele foi aprovado, sabendo-se que <br> a média para aprovação é igual ou superior a 8</p></br>
+    <input type="text" id="aluno" placeholder="Aluno"><br>
+    <input type="number" name="n01" id="n01" placeholder="Nota AP1"> + 
+    <input type="number" name="n02" id="n02" placeholder="Nota AP2"> +
+    <input type="number" name="n03" id="n03" placeholder="Nota AP2"> <br> 
+    <input type="button" value="CONSULTAR" id="but" onclick="aprovacao()">
+    <div id="res"></div>
+
+    <script>
+        function aprovacao() {
+            var a = window.document.getElementById('aluno').value
+            var txtn01 = window.document.getElementById('n01')
+            var txtn02 = window.document.getElementById('n02')
+            var txtn03 = window.document.getElementById('n03')
+            var resp = window.document.getElementById('res')  
+            
+            var nota01 = Number(txtn01.value)
+            var nota02 = Number(txtn02.value)
+            var nota03 = Number(txtn03.value)
+
+            var media = 8
+            var soma = nota01 + nota02 + nota03
+            var calc = soma / 3
+
+            if (calc >= 8) {
+                resp.innerHTML = `Olá ${a}, sua média foi de : ${calc.toFixed(2)}. Você está <strong>APROVADO</strong>`
+
+            } else {
+                resp.innerHTML = `Olá ${a}, sua média foi de : ${calc.toFixed(2)}. Você está <strong>REPROVADO</strong>`
+            }
+
+        }
+    </script>
+</body>
+</html>

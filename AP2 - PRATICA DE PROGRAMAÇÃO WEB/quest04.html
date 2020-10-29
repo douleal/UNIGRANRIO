@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QUESTÃO 4</title>
+    <style>
+        body{
+            font: normal 14px Arial;
+        }
+
+        input {
+            font: normal 14px Arial;
+            width: 200px;
+        }
+
+        #txtn2 {
+            font: normal 14px Arial;
+            width: 90px;
+        }
+
+        #but {
+            font: normal 14px Arial;
+            width: 100px; 
+        }
+
+        #res {
+            margin-top: 10px
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Questão 04</h1>
+    <p>A partir do preço à vista de um determinado produto, calcule o preço total a pagar e o
+        valor da prestação mensal, </br>referentes ao pagamento parcelado. Se o pagamento for
+        parcelado em 3 vezes deve ser dado um acréscimo de</br> 10% no total a ser pago. Se o
+        parcelamento for em 5 vezes, o acréscimo será de 20%.</p></br>
+    <input type="number" name="txtn1" id="txtn1" placeholder="Valor do produto">
+    <input type="number" name="txtn2" id="txtn2" placeholder="parcelas">
+    <input type="button" value="parcelar valor" id="but" onclick="calc()">
+    <div id="res">Resultado</div>
+
+    <script>
+        function calc() {
+            var tn1 = window.document.getElementById('txtn1')
+            var tn2 = window.document.getElementById('txtn2')
+            var res = window.document.getElementById('res')
+            var n1 = Number(tn1.value)
+            var n2 = Number(tn2.value)   
+
+            if (n2 == 2) {
+                var parc = n1 / 2
+                res.innerHTML = `Parcelar em: ${n2}x sem juros no valor de: ${parc.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}. Total à pagar de: <strong>${n1.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}</strong>`
+            } else if (n2 == 3) {
+                var parc = (((n1 / 100) * 10) + n1) / 3
+                var total = parc * 3
+                res.innerHTML = `Parcelar em: ${n2}x com juros no valor de: ${parc.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}. Total à pagar de: <strong>${total.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}</strong>`
+            } else if (n2 == 4) {
+                var parc = (((n1 / 100) * 15) + n1) / 4
+                var total = parc * 4
+                res.innerHTML = `Parcelar em: ${n2}x com juros no valor de: ${parc.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}. Total à pagar de: <strong>${total.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}</strong>`
+            } else if (n2 == 5) {
+                var parc = (((n1 / 100) * 20) + n1) / 5
+                var total = parc * 5
+                res.innerHTML = `Parcelar em: ${n2}x com juros no valor de: ${parc.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}. Total à pagar de: <strong>${total.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}</strong>`
+            } else {
+                res.innerHTML = "Desculpe, não parcelamos essa quantidade"
+            }
+        }
+    </script>
+</body>
+</html>

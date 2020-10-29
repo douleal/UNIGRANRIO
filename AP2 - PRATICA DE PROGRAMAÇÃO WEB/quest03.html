@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QUESTÃO 3</title>
+    <style>
+        body{
+            font: normal 14px Arial;
+        }
+
+        input {
+            font: normal 14px Arial;
+            width: 200px;
+        }
+
+        #but {
+            font: normal 14px Arial;
+            width: 100px; 
+        }
+
+        #res {
+            margin-top: 10px
+        }
+    </style>
+</head>
+<body>
+    <h1>Questão 03</h1>
+    <p>Faça um programa que leia dois valores inteiros A e B, se os valores forem iguais devem ser somado os dois, </br>caso contrário multiplique A por B, ao final do cálculo atribuir o valor para uma variável C.</p></br>
+    <input type="number" name="txtn1" id="txtn1" placeholder="Digite um número inteiro">
+    <input type="number" name="txtn2" id="txtn2" placeholder="Digite outro número inteiro">
+    <input type="button" value="calcular" id="but" onclick="calc()">
+    <div id="res">Resultado</div>
+
+    <script>
+        function calc() {
+            var tn1 = window.document.getElementById('txtn1')
+            var tn2 = window.document.getElementById('txtn2')
+            var res = window.document.getElementById('res')
+            var n1 = Number(tn1.value)
+            var n2 = Number(tn2.value)
+            if (n1 == n2) {
+                var result = n1 + n2
+                res.innerHTML = `Os números são iguais, então a soma é: <strong>${result}</strong>`
+            } else {
+                var result = n1 * n2
+                res.innerHTML = `Os números são diferentes, então a multiplicação é: <strong>${result}</strong>`
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QUESTÃO 01</title>
+    <style>
+        body{
+            font: normal 14px Arial;
+        }
+        Input {
+            font: normal 14px Arial;
+            width: 100px
+        }
+        #res {
+            margin-top: 10px
+        }
+    </style>
+</head>
+<body>
+    <h1>Questão 01</h1>
+    <p>Faça um programa que entre com três números, faça a média aritmética e mostre o resultado.</p><br>
+    <input type="number" name="txtn1" id="txtn1"> +
+    <input type="number" name="txtn2" id="txtn2"> +
+    <input type="number" name="txtn3" id="txtn3">
+    <input type="button" value="calcular" onclick="somar()">
+    <div id="res">Resultado</div>
+
+    <script>
+        function somar() {
+            var tn1 = window.document.getElementById('txtn1')
+            var tn2 = window.document.getElementById('txtn2')
+            var tn3 = window.document.getElementById('txtn3')
+            var res = window.document.getElementById('res')
+            var n1 = Number(tn1.value)
+            var n2 = Number(tn2.value)
+            var n3 = Number(tn3.value)
+            var s = (n1 + n2 + n3) / 3
+            res.innerHTML = `A média aritmética é: <strong>${s}</strong>`
+        }
+    </script>
+</body>
+</html>

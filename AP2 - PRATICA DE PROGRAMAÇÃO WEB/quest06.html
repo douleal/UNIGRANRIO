@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QUESTÃO 6</title>
+    <style>
+        body{
+            font: normal 14px Arial;
+        }
+
+        #op {
+            font: normal 14px Arial;
+            background-color: rgb(190, 190, 190);
+            border: none;
+            text-decoration: none;
+            width: 120px;
+            height: 21px;
+            margin-top: 0.8%;
+
+        }
+
+        #but {
+            font: normal 14px Arial;
+            color: white;
+            width: 100px;
+            border: none;
+            background-color: rgb(51, 51, 51);
+            margin-top: 2%; 
+            text-decoration: none;
+            padding: 8px 8px;
+            text-align: center;
+        }
+
+        #res {
+            margin-top: 10px
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Questão 06</h1>
+    <p>Escreva um programa que receba dois números reais e um código de seleção do
+        usuário.<br> Se o código digitado for 1, faça o programa adicionar os dois números
+        previamente digitados<br> e mostrar o resultado; se o código de seleção for 2, os números
+        deverão ser multiplicados;<br> se o código de seleção for 3, o primeiro número deve ser
+        dividido pelo segundo.</p></br>
+
+    <input type="number" name="num1" id="num1" placeholder="Digite um número"> e 
+    <input type="number" name="num2" id="num2" placeholder="Digite um número">
+    <select name="op" id="op">
+        <option label="" selected disabled>operações</option>
+        <option label="SOMAR">1</option>
+        <option label="SUBTRAIR">2</option>
+        <option label="MULTIPLICAR">3</option>
+        <option label="DIVIDIR">4</option>
+
+    </select><br>
+    <input type="button" value="CALCULAR" id="but" onclick="calc()">
+    <div id="res"></div>
+
+    <script>
+        function calc() {
+            var txtn01 = window.document.getElementById('num1')
+            var txtn02 = window.document.getElementById('num2')
+            var txtn03 = window.document.getElementById('op')
+            var resp = window.document.getElementById('res')  
+            
+            var n1 = Number(txtn01.value)
+            var n2 = Number(txtn02.value)
+            var op = Number(txtn03.value)
+
+            if (op == 1) {
+                var result = n1 + n2
+                resp.innerHTML = `O resultado da soma de ${n1} + ${n2} é igual a: <strong>${result}</strong>`
+            } else if (op == 2) {
+                var result = n1 - n2
+                resp.innerHTML = `O resultado da subtração de ${n1} - ${n2} é igual a: <strong>${result}</strong>`
+            } else if (op == 3) {
+                var result = n1 * n2
+                resp.innerHTML = `O resultado da multiplicação de ${n1} x ${n2} é igual a: <strong>${result}</strong>`
+            } else if (op == 4) {
+                var result = n1 / n2
+                resp.innerHTML = `O resultado da divisão de ${n1} ÷ ${n2} é igual a: <strong>${result}</strong>`
+            } else {
+                resp.innerHTML = `[ERRO] Selecione um operação válida]`
+            }
+
+        }
+    </script>
+</body>
+</html>

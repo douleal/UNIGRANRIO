@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QUESTÃO 2</title>
+    <style>
+        body{
+            font: normal 14px Arial;
+        }
+
+        #txtn1{
+            font: normal 14px Arial;
+            width: 200px;
+        }
+
+        #txtn2 {
+            font: normal 14px Arial;
+            width: 100px;
+            margin-left: 5px;
+        }
+        #res {
+            margin-top: 10px
+        }
+    </style>
+</head>
+<body>
+    <h1>Questão 02</h1>
+    <p>Faça um programa que entre com o nome e o salário de um funcionário e mostre seu novo salário, </br>sabendo que o mesmo teve um aumento de 10%.</p></br>
+    <input type="text" name="txtn1" id="txtn1" placeholder="Nome">
+    <input type="number" name="txtn2" id="txtn2" placeholder="Salário">
+    <input type="button" value="calcular" onclick="calc()">
+    <div id="res">Resultado</div>
+
+    <script>
+        function calc() {
+            var tn1 = window.document.getElementById('txtn1')
+            var tn2 = window.document.getElementById('txtn2')
+            var res = window.document.getElementById('res')
+            var salario = Number(tn2.value)
+            var aumento = (salario / 100) * 10
+            var novo_salario = salario + aumento
+            res.innerHTML = `Seu novo salário é: <strong>${novo_salario.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}</strong>`
+        }
+    </script>
+</body>
+</html>
