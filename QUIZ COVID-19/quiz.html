@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QUIZ COVID-19</title>
+
+    <link href="/frameworks/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/style/style.css" rel="stylesheet">
+
+</head>
+<body>
+
+    <section id="iniciar">
+
+        <div class="card" style="width: 25rem;">
+            <div class="card-body" class="container">
+
+                <div id="imgQuiz" style="margin-bottom: 1.0rem;"></div> 
+
+                <h5 class="card-title" id="perg">Qual a Pergunta</h5>
+
+                <!-- Perguntas -->
+                <div class="opcao-container" id="opc"></div>
+
+                <!-- Status -->
+                <div id="status"></div>
+
+                <!-- Progresso -->
+                <div class="etapas" id="etapas">
+                    <div class="etapas-animacao">
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated" id="progresso" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="etapas-texto">
+                        <p id="num-automatico"></p>
+                        <p class="num-fixo">/17</p>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p class="m-0 text-center text-white"><a href="https://covid19.tabipacademy.com/covid-19-quiz/" target="_blank" >© COVID-19 HUB TABIP</a><br>Tradução e Desenvolvimento por Douglas Leal</p>
+        </div>
+    </section>
+
+    <script src="/frameworks/jquery/jquery.min.js"></script>
+    <script src="/frameworks/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/script/script.js"></script>
+ 
+</body>
+</html>

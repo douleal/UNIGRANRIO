@@ -1,0 +1,110 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    background-image: url(/img/shutterstock_covid19.jpg); background-size: 100%;
+}
+
+#iniciar {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.733);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.statusColor {
+    background-color: rgba(0, 0, 0, 0.733);
+}
+
+.imgQ {
+    max-width: 100%;
+}
+
+.footer {
+    position: relative;
+    width: 100vw;
+    height: 30px;
+    vertical-align: bottom;
+    margin-top: 20px;
+}
+
+.opcao-container {
+    cursor: pointer;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.opcao {
+    width: 100%;
+    background-color:rgb(61, 60, 94);
+    color: white;
+    text-align: center;
+    border: none;
+    border-bottom: none;
+    padding: 0.3rem;
+    margin: 0.3rem;
+}
+
+.opcao:hover {
+    background: rgb(103, 102, 139);
+    border: none;
+}
+
+.etapas {
+    width: 100%;
+    padding-top: 0.5rem;
+    display: flex;
+    flex-direction: row;
+    margin-top: 0.5rem;
+}
+
+.etapas-animacao {
+    width: 90%;
+    margin-top: 0.2rem;
+}
+
+.etapas-texto {
+    width: 10%;
+    display: flex;
+    flex-direction: row;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-left: 2rem;
+
+}
+
+.acertou {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    background-color: rgb(15, 180, 0);
+    text-align: center;
+    padding: 0.3rem;
+}
+
+.errou {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    background-color: rgb(180, 0, 0);
+    text-align: center;
+    padding: 0.3rem;
+}
+
+#progresso {
+    width: 5.885%;
+}
